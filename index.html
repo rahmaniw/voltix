@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Voltix — Votre maison vous parle avant la facture</title>
+<meta name="description" content="Voltix réunit l’eau, le gaz et l’électricité sur un écran et estime les coûts selon les tarifs configurés.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#contenu">Passer au contenu</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="Voltix, accueil">
+      <span class="logo"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#fff"/><path d="M10 12h6.5L22 28l5.5-16H34l-8.5 24h-7z" fill="#000"/><circle cx="38.5" cy="15" r="3" fill="#000"/></svg></span>
+      <b>VOLTIX</b>
+    </a>
+    <nav aria-label="Navigation principale">
+      <a href="#produit">Produit</a>
+      <a href="#installation">Installation</a>
+      <a href="#previsions">Prévisions</a>
+      <a href="#fiche">Fiche technique</a>
+    </nav>
+    <a class="btn btn-dark" href="commande.html">Réserver la mienne</a>
+  </div>
+</header>
+
+<main id="contenu">
+<section class="hero" aria-labelledby="h-hero">
+  <div class="wrap">
+    <div>
+      <div class="tri" aria-hidden="true"><i></i><i></i><i></i></div>
+      <p class="kicker">Conçu au Québec, pour les tarifs d’ici</p>
+      <h1 id="h-hero">Votre maison vous parle avant la facture.</h1>
+      <p class="lede">Voltix réunit l’eau, le gaz et l’électricité sur un écran chez vous, et estime les coûts selon les tarifs configurés pour votre logement.</p>
+      <div class="cta">
+        <a class="btn btn-dark" href="commande.html">Réserver la mienne</a>
+        <a class="btn btn-ghost" href="#previsions" data-goto-mine>Entrer mes informations</a>
+        <small>Satisfait ou remboursé après 3 mois</small>
+      </div>
+    </div>
+    <aside class="side" aria-label="Aperçu du tableau de bord Voltix">
+      <div class="live demo" role="group" aria-label="Aperçu de démonstration de l’écran Voltix">
+        <div class="live-head"><span><i class="dot"></i><b id="s-title">Démonstration</b></span><time class="num" id="s-clock">—</time></div>
+        <p class="live-disclaimer demo" id="s-source" role="status">Données simulées · aucun compteur connecté</p>
+        <div class="lm water"><div><span class="nm">Eau</span><small id="s-water-rate">—</small></div><div class="v num" id="s-water">—</div></div>
+        <div class="lm gas" id="s-gas-row"><div><span class="nm">Gaz</span><small id="s-gas-rate">—</small></div><div class="v num" id="s-gas">—</div></div>
+        <div class="lm elec"><div><span class="nm">Électricité</span><small id="s-elec-rate">—</small></div><div class="v num" id="s-elec">—</div></div>
+        <svg id="s-spark" class="spark" viewBox="0 0 300 58" role="img" aria-label="Facture cumulée du mois, réelle puis projetée"></svg>
+        <div class="live-foot">
+          <div><small class="l" id="s-cost-lbl">Coût cumulé aujourd’hui</small><b class="big num" id="s-cost">—</b></div>
+          <div><small class="l">Palier</small><b class="big" id="s-tier">—</b></div>
+        </div>
+        <div class="est"><small class="l">Estimation fin de mois</small><b class="big num" id="s-est">—</b><span id="s-est-range"></span></div>
+        <p class="live-note"><span id="s-profile"></span><span>Écran mural, sans fil</span></p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="stats" aria-label="Fonctions de la démonstration">
+  <div class="wrap">
+    <div class="stat"><b class="num">3</b><span>services représentés : eau, gaz et électricité.</span></div>
+    <div class="stat"><b class="num">2</b><span>paliers d’électricité pris en compte dans l’estimation.</span></div>
+    <div class="stat"><b class="num">1</b><span>estimation détaillée, ventilée par service et par frais.</span></div>
+  </div>
+</section>
+
+<section class="sec" id="probleme" aria-labelledby="h-prob" style="padding-top:20px">
+  <div class="wrap">
+    <h2 id="h-prob">On gère ce qu’on peut voir. Personne ne peut voir sa consommation.</h2>
+    <p class="intro">Une maison consomme en continu — mais l’information n’arrive qu’une fois par mois, agrégée, impossible à relier à une habitude précise.</p>
+    <div class="problems">
+      <article><h3>La facture arrive trop tard</h3><p>Dépasser le seuil quotidien de 40&nbsp;kWh change le prix du kWh de plus de 55&nbsp;%, sans aucun signal sur le coup.</p></article>
+      <article><h3>Les fuites passent inaperçues</h3><p>Un débit anormal peut courir pendant des jours avant qu’un chiffre de facture n’attire l’attention.</p></article>
+      <article><h3>Les applications ne suffisent pas</h3><p>Un écran fixe informe toute la famille, sans qu’on ait à penser à l’ouvrir.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec soft" id="produit" aria-labelledby="h-prod">
+  <div class="wrap">
+    <h2 id="h-prod">Trois compteurs. Un seul écran.</h2>
+    <p class="intro">Des capteurs non invasifs se posent sur les compteurs existants — aucun changement à la tuyauterie ou au panneau électrique.</p>
+    <div class="cols3">
+      <article class="water"><h3>Eau</h3><p>Débit suivi en continu, pour repérer une fuite avant qu’elle ne s’aggrave.</p><span class="spec">Précision cible&nbsp;: ±3&nbsp;%</span></article>
+      <article class="gas"><h3>Gaz</h3><p>Chauffage et eau chaude suivis, coût accumulé heure par heure.</p><span class="spec">Lecture sans contact avec le circuit</span></article>
+      <article class="elec"><h3>Électricité</h3><p>Chaque appareil pèse sur la facture — affiché en dollars.</p><span class="spec">Calcul du vrai tarif à deux paliers</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="installation" aria-labelledby="h-inst">
+  <div class="wrap">
+    <h2 id="h-inst">Quatre étapes, aucun changement à vos habitudes.</h2>
+    <p class="intro">Un technicien pose les capteurs en moins d’une heure.</p>
+    <ol class="steps">
+      <li><h3>Pose des capteurs</h3><p>Fixés sur les compteurs existants, sans intervention sur les circuits.</p></li>
+      <li><h3>Connexion sans fil</h3><p>L’écran solaire se connecte automatiquement au Wi-Fi.</p></li>
+      <li><h3>Affichage immédiat</h3><p>Consommation et coût s’affichent en direct.</p></li>
+      <li><h3>Suivi mensuel</h3><p>L’historique se construit mois après mois.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec soft" id="previsions" aria-labelledby="h-prev">
+  <div class="wrap">
+    <h2 id="h-prev">Vous savez où vous atterrissez, avant la fin du mois.</h2>
+    <p class="intro">Voltix projette votre facture à partir de votre rythme de consommation réel. Entrez vos propres informations pour voir votre mois.</p>
+
+    <div class="modes" role="group" aria-label="Source des données">
+      <button type="button" id="mode-demo" aria-pressed="true">Exemple de logement</button>
+      <button type="button" id="mode-mine" aria-pressed="false">Mon logement</button>
+    </div>
+
+    <div class="dash">
+      <!-- ============ colonne de gauche : réglages ============ -->
+      <div>
+        <div class="card ctl" id="ctl-demo">
+          <div>
+            <span class="fl" id="cl-prof">Type de logement</span>
+            <div class="seg" id="seg-prof" role="group" aria-labelledby="cl-prof"></div>
+          </div>
+          <div class="slide">
+            <label class="fl" for="day">Faites avancer le mois</label>
+            <output id="day-out" for="day"></output>
+            <input id="day" type="range" min="1" max="30" step="1" value="1" aria-describedby="day-help">
+            <p class="hint" id="day-help">Voyez ce que Voltix aurait prévu ce jour-là.</p>
+          </div>
+          <label style="display:flex;gap:10px;align-items:center;font-size:15px;cursor:pointer;min-height:44px">
+            <input type="checkbox" id="truth" style="width:20px;height:20px;accent-color:var(--text)"> Comparer au réel simulé du mois complet
+          </label>
+          <span class="chip" id="chip" role="status"><i></i><span>Connexion…</span></span>
+        </div>
+
+        <form class="card ctl" id="ctl-mine" hidden autocomplete="off" novalidate>
+          <h3>Mon logement</h3>
+          <div>
+            <span class="fl" id="l-people">Personnes dans le logement</span>
+            <div class="stepper" role="group" aria-labelledby="l-people">
+              <button type="button" id="p-minus" aria-label="Une personne de moins">−</button>
+              <output id="m-people" aria-live="polite">4</output>
+              <button type="button" id="p-plus" aria-label="Une personne de plus">+</button>
+            </div>
+          </div>
+          <fieldset><legend>Type de logement</legend>
+            <div class="seg">
+              <label class="pill"><input type="radio" name="house" value="h"><span>Maison</span></label>
+              <label class="pill"><input type="radio" name="house" value="a"><span>Appartement ou condo</span></label>
+            </div>
+          </fieldset>
+          <fieldset><legend>Chauffage</legend>
+            <div class="seg">
+              <label class="pill"><input type="radio" name="heat" value="gas"><span>Gaz</span></label>
+              <label class="pill"><input type="radio" name="heat" value="elec"><span>Électricité</span></label>
+            </div>
+          </fieldset>
+          <fieldset><legend>Eau chaude</legend>
+            <div class="seg">
+              <label class="pill"><input type="radio" name="dhw" value="gas"><span>Gaz</span></label>
+              <label class="pill"><input type="radio" name="dhw" value="elec"><span>Électricité</span></label>
+            </div>
+          </fieldset>
+          <fieldset><legend>Climatisation</legend>
+            <div class="seg">
+              <label class="pill"><input type="radio" name="ac" value="y"><span>Oui</span></label>
+              <label class="pill"><input type="radio" name="ac" value="n"><span>Non</span></label>
+            </div>
+          </fieldset>
+
+          <div>
+            <h3 style="font-size:26px;margin-top:6px">Mes relevés depuis le 1<sup style="font-size:.55em">er</sup> du mois</h3>
+            <p class="hint">Pas de relevé sous la main ? Laissez vide : Voltix calcule votre consommation d’après votre logement, puis la convertit en facture avec les tarifs d’Hydro-Québec.</p>
+          </div>
+          <div class="row2">
+            <div><label class="fl" for="m-elec">Électricité</label><div class="nf"><input id="m-elec" type="number" inputmode="decimal" min="0" step="any" placeholder="ex. 150"><em>kWh</em></div></div>
+            <div id="m-gas-box"><label class="fl" for="m-gas">Gaz</label><div class="nf"><input id="m-gas" type="number" inputmode="decimal" min="0" step="any" placeholder="ex. 40"><em>m³</em></div></div>
+            <div><label class="fl" for="m-water">Eau</label><div class="nf"><input id="m-water" type="number" inputmode="decimal" min="0" step="any" placeholder="ex. 5,5"><em>m³</em></div></div>
+
+          </div>
+
+          <details class="tar">
+            <summary>Mes tarifs</summary>
+            <p class="hint" style="margin-bottom:12px">Préremplis avec la grille Hydro-Québec du 1<sup>er</sup> avril 2026. Changez ce qui diffère sur votre facture.</p>
+            <div class="row2">
+              <div><label class="fl" for="t-t1">Électricité, 1<sup>er</sup> palier</label><div class="nf"><input id="t-t1" type="number" inputmode="decimal" min="0" step="any"><em>¢/kWh</em></div></div>
+              <div><label class="fl" for="t-t2">Électricité, 2<sup>e</sup> palier</label><div class="nf"><input id="t-t2" type="number" inputmode="decimal" min="0" step="any"><em>¢/kWh</em></div></div>
+              <div><label class="fl" for="t-thr">Seuil du palier</label><div class="nf"><input id="t-thr" type="number" inputmode="decimal" min="1" step="any"><em>kWh/jour</em></div></div>
+              <div><label class="fl" for="t-access">Frais d’accès</label><div class="nf"><input id="t-access" type="number" inputmode="decimal" min="0" step="any"><em>¢/jour</em></div></div>
+              <div><label class="fl" for="t-gasvar">Gaz, prix au m³</label><div class="nf"><input id="t-gasvar" type="number" inputmode="decimal" min="0" step="any"><em>¢/m³</em></div></div>
+              <div><label class="fl" for="t-gasbase">Gaz, frais de base</label><div class="nf"><input id="t-gasbase" type="number" inputmode="decimal" min="0" step="any"><em>$/jour</em></div></div>
+              <div><label class="fl" for="t-water">Eau au compteur</label><div class="nf"><input id="t-water" type="number" inputmode="decimal" min="0" step="any"><em>$/m³</em></div></div>
+            </div>
+            <button type="button" class="linkbtn" id="t-reset">Rétablir les tarifs de départ</button>
+          </details>
+          <p class="priv"><span>Vos informations restent dans votre navigateur. Rien n’est envoyé.</span></p>
+        </form>
+      </div>
+
+      <!-- ============ colonne de droite : résultats ============ -->
+      <div class="res">
+        <div class="basis"><span id="basis">—</span></div>
+        <div class="kpis" aria-live="polite">
+          <div class="pair">
+            <div class="kpi now"><small>Facture rendue à ce jour</small><b class="num" id="k-todate">—</b><em id="k-todate-c">—</em></div>
+            <div class="kpi main"><small>Prévue à la fin du mois, au rythme actuel</small><b class="num" id="k-total">—</b><em id="k-range">—</em><em id="k-pace">—</em></div>
+          </div>
+          <div class="prog">
+            <span class="pl" id="pg-t-l">—</span><div class="bar"><i id="pg-t"></i></div>
+            <span class="pl" id="pg-b-l">—</span><div class="bar b"><i id="pg-b"></i></div>
+          </div>
+          <div class="kpi water"><small><i></i>Eau projetée</small><b class="num" id="k-water">—</b><em id="k-water-c">—</em></div>
+          <div class="kpi gas" id="k-gas-box"><small><i></i>Gaz projeté</small><b class="num" id="k-gas">—</b><em id="k-gas-c">—</em></div>
+          <div class="kpi elec"><small><i></i>Électricité projetée</small><b class="num" id="k-elec">—</b><em id="k-elec-c">—</em></div>
+        </div>
+        <p class="vs" id="k-vs"></p>
+        <div class="tiernote" id="tiernote" hidden></div>
+        <div class="card" id="bill-card">
+          <h3 style="font-size:30px">Votre facture, ligne par ligne</h3>
+          <p class="hint" style="margin:4px 0 12px" id="bill-sub"></p>
+          <table class="tbl" id="bill-table"><tbody></tbody></table>
+        </div>
+        <div class="card">
+          <svg id="chart" viewBox="0 0 760 360" role="img" aria-label="Coût cumulé de la facture au fil du mois : réel jusqu’à aujourd’hui, puis projection avec intervalle de confiance."></svg>
+          <div class="legend" id="legend"></div>
+          <p class="readout num" id="readout" aria-live="polite"></p>
+          <details class="how">
+            <summary>Comment la prévision est calculée</summary>
+            <ul>
+              <li>Chaque service suit un modèle journalier : consommation de base + chauffage proportionnel aux degrés-jours, avec un ajustement de fin de semaine.</li>
+              <li>Le modèle part d’une valeur typique du logement et se cale sur vos mesures de plus en plus, jour après jour.</li>
+              <li>La météo des jours restants est la normale de saison, ajustée par l’écart des derniers jours.</li>
+              <li>La facture est recalculée avec la vraie grille : paliers, frais fixes et taxes. L’intervalle couvre 80&nbsp;% des cas.</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <div class="split" id="split">
+      <div class="card">
+        <h3>Comment le coût est calculé</h3>
+        <table class="tbl" id="tariff-table"><tbody></tbody></table>
+        <p class="fine">Le tarif d’électricité est présenté à titre indicatif. <a href="https://www.hydroquebec.com/residentiel/espace-clients/tarifs/tarif-d.html" target="_blank" rel="noopener noreferrer">Consulter le tarif D officiel d’Hydro-Québec</a>. Le gaz et l’eau sont des estimations à confirmer avec votre fournisseur ou votre municipalité.</p>
+      </div>
+      <div class="card" id="hist-card">
+        <h3>Vos derniers mois</h3>
+        <svg id="hist" viewBox="0 0 380 250" role="img" aria-label="Facture totale des six derniers mois et estimation du mois en cours"></svg>
+        <p class="fine">Le dernier bâton est l’estimation du mois en cours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="fiche" aria-labelledby="h-fiche">
+  <div class="wrap">
+    <h2 id="h-fiche">Construit pour durer, pas pour impressionner.</h2>
+    <p class="intro">Chiffres visés pour la version pilote actuellement en développement.</p>
+    <dl class="specs">
+      <div><dt>Alimentation</dt><dd>Solaire + batterie de secours</dd></div>
+      <div><dt>Connectivité</dt><dd>Wi-Fi, protocole MQTT</dd></div>
+      <div><dt>Capteur électrique</dt><dd>Pince non invasive</dd></div>
+      <div><dt>Capteur eau</dt><dd>Débitmètre à impulsions</dd></div>
+      <div><dt>Écran</dt><dd>7&nbsp;po, mural</dd></div>
+      <div><dt>Installation</dt><dd>Moins d’une heure</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="final" aria-labelledby="h-final">
+  <div class="wrap">
+    <h2 id="h-final">Trois mois pour voir la différence. Sinon, remboursé.</h2>
+    <a class="btn btn-dark" href="commande.html">Réserver la mienne</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#" aria-label="Voltix, haut de page">
+        <span class="logo"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#fff"/><path d="M10 12h6.5L22 28l5.5-16H34l-8.5 24h-7z" fill="#000"/><circle cx="38.5" cy="15" r="3" fill="#000"/></svg></span>
+        <b style="color:var(--text)">VOLTIX</b>
+      </a>
+      <p class="sl">Rendre la consommation invisible, visible. Conçu à Montréal.</p>
+    </div>
+    <div><h4>Produit</h4><ul><li><a href="#produit">Les 3 compteurs</a></li><li><a href="#installation">Installation</a></li><li><a href="#fiche">Fiche technique</a></li></ul></div>
+    <div><h4>Entreprise</h4><ul><li><a href="#probleme">Notre mission</a></li><li><a href="commande.html">Réserver</a></li></ul></div>
+    <div class="legal"><span>© 2026 Voltix</span><span>Tarifs affichés à titre indicatif, sujets aux grilles officielles d’Hydro-Québec et d’Énergir.</span></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

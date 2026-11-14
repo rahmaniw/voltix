@@ -1,0 +1,4 @@
+project_id = "voltix"
+
+[functions.send-reservation]
+verify_jwt = true

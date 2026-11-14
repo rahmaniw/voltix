@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Réserver Voltix</title>
+<meta name="description" content="Préparez votre réservation Voltix à 350 $ CA avant taxes. Livraison et paiement réel à confirmer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#commande">Passer à la réservation</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Voltix, accueil">
+      <span class="logo"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#fff"/><path d="M10 12h6.5L22 28l5.5-16H34l-8.5 24h-7z" fill="#000"/><circle cx="38.5" cy="15" r="3" fill="#000"/></svg></span>
+      <b>VOLTIX</b>
+    </a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html#produit">Produit</a>
+      <a href="index.html#previsions">Prévisions</a>
+    </nav>
+    <button class="btn btn-ghost" type="button" data-account="login">Se connecter</button>
+  </div>
+</header>
+
+<main id="commande" class="checkout">
+  <div class="checkout-wrap">
+    <a class="checkout-back" href="index.html">← Retour au site</a>
+    <header class="checkout-heading">
+      <p class="kicker">Réservation pilote</p>
+      <h1>Préparez vos lunettes financières.</h1>
+      <p class="intro">Cette page est une maquette : aucun achat ni paiement ne sera effectué.</p>
+    </header>
+
+    <div class="checkout-layout">
+      <section class="checkout-card" aria-label="Étapes de réservation">
+        <ol class="checkout-steps" aria-label="Progression de la réservation">
+          <li aria-current="step"><span>1</span> Quantité</li>
+          <li><span>2</span> Livraison</li>
+          <li><span>3</span> Courriel</li>
+        </ol>
+
+        <section class="checkout-step" id="step-1" aria-labelledby="step-title-1">
+          <p class="step-kicker">Étape 1 sur 3</p>
+          <h2 id="step-title-1" tabindex="-1">Combien d’appareils souhaitez-vous&nbsp;?</h2>
+          <div class="quantity-control">
+            <button type="button" data-quantity="-1" aria-label="Retirer un appareil">−</button>
+            <label class="sr-only" for="quantity">Nombre d’appareils</label>
+            <input id="quantity" type="number" min="1" step="1" value="1" inputmode="numeric">
+            <button type="button" data-quantity="1" aria-label="Ajouter un appareil">+</button>
+          </div>
+          <p class="quantity-output" id="quantity-output" aria-live="polite">1 appareil sélectionné</p>
+          <p class="checkout-note">Prix : <strong>350 $ CA par appareil, avant taxes</strong>. Les taxes et le total se recalculent selon la quantité.</p>
+          <div class="checkout-actions">
+            <a class="btn btn-ghost" href="index.html">Annuler</a>
+            <button class="btn btn-dark" type="button" data-next="2">Continuer</button>
+          </div>
+        </section>
+
+        <section class="checkout-step" id="step-2" aria-labelledby="step-title-2" hidden>
+          <p class="step-kicker">Étape 2 sur 3</p>
+          <h2 id="step-title-2" tabindex="-1">Livraison</h2>
+          <div class="checkout-notice">
+            <strong id="delivery-date">Date estimative : calcul en cours…</strong>
+            <span>Estimation au plus tard dans les 5 jours calendrier suivant la réservation.</span>
+          </div>
+          <p class="checkout-note">Aucune adresse n’est demandée ni enregistrée dans cette maquette.</p>
+          <div class="checkout-actions">
+            <button class="btn btn-ghost" type="button" data-previous="1">Retour</button>
+            <button class="btn btn-dark" type="button" data-next="3">Continuer</button>
+          </div>
+        </section>
+
+        <section class="checkout-step" id="step-3" aria-labelledby="step-title-3" hidden>
+          <p class="step-kicker">Étape 3 sur 3</p>
+          <h2 id="step-title-3" tabindex="-1">Recevoir le récapitulatif</h2>
+          <p class="checkout-note">Connectez-vous avec votre adresse courriel vérifiée pour recevoir le détail de votre réservation et la date estimée de livraison.</p>
+          <div class="checkout-notice security">
+            <strong>Aucun paiement ni renseignement bancaire</strong>
+            <span>Cette réservation ne prélève pas d’argent. Aucun numéro de carte, CVV ou compte bancaire n’est demandé.</span>
+          </div>
+          <p class="auth-status" id="auth-status" role="status">La connexion par courriel doit être configurée pour envoyer la confirmation.</p>
+          <div class="checkout-actions">
+            <button class="btn btn-ghost" type="button" data-account="login">Se connecter par courriel</button>
+            <button class="btn btn-ghost" type="button" data-account="create">Créer un compte</button>
+          </div>
+          <button class="btn btn-dark payment-disabled" id="send-confirmation" type="button" disabled>Envoyer ma confirmation par courriel</button>
+          <p class="auth-status" id="email-status" role="status"></p>
+          <div class="checkout-actions">
+            <button class="btn btn-ghost" type="button" data-previous="2">Retour</button>
+          </div>
+        </section>
+      </section>
+
+      <aside class="order-summary" aria-labelledby="summary-title">
+        <h2 id="summary-title">Résumé</h2>
+        <div class="summary-row"><span>Appareils</span><strong id="summary-quantity">1</strong></div>
+        <div class="summary-row"><span>Sous-total</span><strong id="summary-subtotal">350,00 $</strong></div>
+        <div class="summary-row" id="summary-discount-row" hidden><span>Réduction ECOLOGIE (25 %)</span><strong id="summary-discount">−87,50 $</strong></div>
+        <div class="summary-row"><span>Livraison</span><strong id="summary-shipping">20,00 $</strong></div>
+        <div class="summary-row"><span>TPS (5 %)</span><strong id="summary-gst">18,50 $</strong></div>
+        <div class="summary-row"><span>TVQ (9,975 %)</span><strong id="summary-qst">36,91 $</strong></div>
+        <div class="summary-total"><span>Valeur estimée</span><strong id="summary-total">425,41 $</strong></div>
+        <div class="discount-form">
+          <label for="discount-code">Code de réduction</label>
+          <form id="coupon-form">
+            <input id="discount-code" type="text" autocomplete="off" placeholder="Ex. ARBRE" aria-describedby="coupon-status">
+            <button class="btn btn-ghost" type="submit">Appliquer</button>
+          </form>
+          <p id="coupon-status" role="status" aria-live="polite"></p>
+        </div>
+        <p id="delivery-summary">Livraison estimée au plus tard dans 5 jours calendrier.</p>
+        <p>Montant indicatif en dollars canadiens. Réduction appliquée avant taxes aux appareils; livraison taxable. Aucun paiement n’est prélevé.</p>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="checkout-footer">
+  <div class="wrap">
+    <span>© 2026 Voltix</span>
+    <span>Réservation sans paiement; livraison estimée sous 5 jours calendrier.</span>
+  </div>
+</footer>
+
+<dialog id="account-dialog" aria-labelledby="account-title">
+  <form id="auth-form" novalidate>
+    <h2 id="account-title">Compte Voltix</h2>
+    <p class="sub" id="account-message">Un code de vérification sera envoyé à votre adresse courriel.</p>
+    <div id="email-entry">
+      <div class="field">
+        <label for="account-email">Adresse courriel</label>
+        <input id="account-email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field" id="password-field">
+        <label for="account-password">Mot de passe</label>
+        <input id="account-password" name="password" type="password" autocomplete="current-password" minlength="8">
+      </div>
+      <div class="row auth-methods">
+        <button class="btn btn-dark" id="password-submit" type="button">Se connecter avec mot de passe</button>
+        <button class="btn btn-ghost google-signin" id="google-signin" type="button">Continuer avec Google</button>
+      </div>
+      <p class="auth-divider"><span>ou avec un code par courriel</span></p>
+      <div class="row auth-methods">
+        <button class="btn btn-ghost" id="auth-submit" type="submit">Recevoir un code par courriel</button>
+      </div>
+    </div>
+    <div id="verification-panel" hidden>
+      <div class="field">
+        <label for="verification-code">Code reçu par courriel</label>
+        <input id="verification-code" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" aria-describedby="auth-feedback">
+      </div>
+      <div class="row">
+        <button class="btn btn-dark" id="verify-code" type="button">Vérifier le code</button>
+        <button class="btn btn-ghost" id="resend-code" type="button">Renvoyer le code</button>
+      </div>
+    </div>
+    <p class="auth-status" id="auth-feedback" role="status"></p>
+    <div class="row"><button class="btn btn-ghost" id="auth-close" type="button">Fermer</button></div>
+  </form>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.0"></script>
+<script src="supabase-config.js"></script>
+<script src="commande.js"></script>
+</body>
+</html>
